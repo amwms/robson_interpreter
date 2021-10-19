@@ -1,0 +1,83 @@
+{
+  "typ": "Blok",
+  "instrukcje": [
+    {
+      "typ": "Przypisanie",
+      "nazwa": "a",
+      "wartosc": {
+        "typ": "Liczba",
+        "wartosc": 25
+      }
+    },
+    {
+      "typ": "Przypisanie",
+      "nazwa": "b",
+      "wartosc": {
+        "typ": "Liczba",
+        "wartosc": 5
+      }
+    },
+    {
+      "typ": "While",
+      "warunek": {
+        "typ": "!=",
+        "argument1": {
+          "typ": "Zmienna",
+          "nazwa": "a"
+        },
+        "argument2": {
+          "typ": "Zmienna",
+          "nazwa": "b"
+        }
+      },
+      "blok": {
+        "typ": "If",
+        "warunek": {
+          "typ": ">",
+          "argument1": {
+            "typ": "Zmienna",
+            "nazwa": "a"
+          },
+          "argument2": {
+            "typ": "Zmienna",
+            "nazwa": "b"
+          }
+        },
+        "blok_prawda": {
+          "typ": "Przypisanie",
+          "nazwa": "a",
+          "wartosc": {
+            "typ": "Minus",
+            "argument1": {
+              "typ": "Zmienna",
+              "nazwa": "a"
+            },
+            "argument2": {
+              "typ": "Zmienna",
+              "nazwa": "b"
+            }
+          }
+        },
+        "blok_falsz": {
+          "typ": "Przypisanie",
+          "nazwa": "b",
+          "wartosc": {
+            "typ": "Minus",
+            "argument1": {
+              "typ": "Zmienna",
+              "nazwa": "b"
+            },
+            "argument2": {
+              "typ": "Zmienna",
+              "nazwa": "a"
+            }
+          }
+        }
+      }
+    },
+    {
+      "typ": "Zmienna",
+      "nazwa": "a"
+    }
+  ]
+}
